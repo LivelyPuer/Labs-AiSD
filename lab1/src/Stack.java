@@ -26,6 +26,10 @@ public class Stack {
         return size;
     }
 
+    public void setLastNode(Node node){
+        lastNode = node;
+    }
+
     public Boolean isEmpty() {
         return lastNode == null;
     }
