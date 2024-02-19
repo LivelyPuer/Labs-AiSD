@@ -39,4 +39,34 @@ public class Node {
         return prevNode;
     }
 
+    public Boolean greatThen(Node node) {
+        if (node == null){
+            return true;
+        }
+        if (name.compareTo(node.name) > 0) {
+            return true;
+        } else if (name.compareTo(node.name) < 0) {
+            return false;
+        }
+
+        if (group.compareTo(node.group) > 0) {
+            return true;
+        } else if (group.compareTo(node.group) < 0) {
+            return false;
+        }
+        if (age > node.age) {
+            return true;
+        } else if (age < node.age) {
+            return false;
+        }
+        return false;
+    }
+
+    public Boolean equal(Node node) {
+        return name.compareTo(node.name) == 0 &&
+                group.compareTo(node.group) == 0 &&
+                Objects.equals(age, node.age);
+
+    }
+
 }
